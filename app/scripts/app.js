@@ -12,8 +12,12 @@
       templateUrl: '/templates/landing.html'
     })
       .state('album', {
-      url: '/',
+      url: '/album',
       templateUrl: '/templates/album.html'
+    })
+      .states('collection', {
+      url: '/collection',
+      templateUrl: '/templates/collection.html'
     });
     
     angular
