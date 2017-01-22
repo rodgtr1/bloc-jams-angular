@@ -1,5 +1,6 @@
 (function() {
   function config($stateProvider, $locationProvider) {
+    
     $locationProvider
       .html5Mode({
         enabled: true,
@@ -15,15 +16,15 @@
       url: '/album',
       templateUrl: '/templates/album.html'
     })
-      .states('collection', {
+      .state('collection', {
       url: '/collection',
       templateUrl: '/templates/collection.html'
     });
+  }
     
     angular
       .module('blocJams', ['ui.router'])
-      config(config);    
-    
-})();
+      .config(config);
+  })();
 
 
