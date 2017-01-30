@@ -5,7 +5,7 @@ In this project we revisited our original BlocJams project and undertook an almo
 
 <br />
 
-![BlocJams Landing](assets/images/BlocJams Landing.png)
+![BlocJams Landing](app/images/BlocJams Landing.png)
 
 ##Project Summary
 To setup, we installed four Grunt plugins from the outset (Watch, Copy, Clean, and Hapi). We declared an Angular module (angular.module(‘blocJams’, []);) and bootstrapped the application using the ng-app directive in the root element (<html>).  We set index.html as our global file, with our templates being landing.html, album.html, and collection.html. Much of the data in these templates were copied over from our prior Bloc Jams project. In order to display these templates in the view, we used UI-Router to set our URL routes. We injected the UI-Router Module into our module in app.js (angular.module(‘blocJams’, [‘ui.router’]);. We then configured our module with two providers, $stateProvider and $locationProvider. We set the $locationProvider to html5Mode so that the user will see clean URL’s without the hasbang (i.e. /#i/album). We configured the stateProvider in order to configure our template “states,” and changed our href anchor tags to ui-sref=“(state name), so that it will trigger a change in state and not reload entire pages when we click on them. 
@@ -22,11 +22,11 @@ Now that our songs play in album view, we wanted to get our player bar in sync w
 Check out my [Netlify deploy](http://bloc-jams-travis-rodgers.netlify.com/) to see it in action.
 
 ##More Screenshots
-![BlocJams Landing](assets/images/BlocJams Collection.png)
+![BlocJams Landing](app/images/BlocJams Collection.png)
 
 <br />
 
-![BlocJams Landing](assets/images/BlocJams Album.png) 
+![BlocJams Landing](app/images/BlocJams Album.png) 
 
 We created a custom directive for our seekbar and used the logic from our foundational Bloc Jams project to configure our seekbar functionality as well as the thumb (circle) on the seekbar using a click event and mousedown/mouseup.  Next we used an $observe attribute to tell Angular to observe the object and added an attribute named onChange and a function that would continually update the value with the new value. 
 
